@@ -10,5 +10,14 @@ public class BiodataSaya {
 
         System.out.println("Nama : Ariya Ssyifa");
         //menampilkan atau mencetak nama program studi
+
+        int umur = 19;
+        double tinggi = 165;
+        char inisial ='A';
+        boolean mahasiswaaktif = true;
+
+        System.out.println("Tinggi: " + tinggi);
+        System.out.println("Inisial: " + inisial);
+        System.out.println("Mahasiswa aktif:" + mahasiswaaktif);
     }
 }
