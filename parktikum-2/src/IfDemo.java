@@ -1,12 +1,17 @@
 public class IfDemo {
     public static void main(String[] args) {
+        int nilai = 78;
+        char huruf;
 
-        int nilai = 60;
-
-        if(nilai >= 75) {
-            System.out.println("Anda LULUS");
+        if(nilai >= 85) {
+            huruf = 'A';
+        } else if (nilai >= 70) {
+            huruf = 'B';
+        } else if (nilai >= 55) {
+            huruf = 'C';
         } else {
-            System.out.println("Anda TIDAK LULUS");
+            huruf = 'E';
         }
+        System.out.println("Nilai huruf: " + huruf);
     }
 }
