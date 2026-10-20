@@ -15,4 +15,7 @@ public class Produk {
         System.out.println(p1.namaProduk + "mahal: " + p1.isMahal(500000));
         System.out.println(p1.namaProduk + "mahal: " + p1.isMahal(500000));
     }
+
+    public void tampilkanData() {
+    }
 }
