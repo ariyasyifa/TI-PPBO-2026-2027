@@ -4,15 +4,23 @@ public class Mahasiswa {
         double ipk;
 
         //constructor default (tanpa parameter)
-public Mahasiswa() {
+    public Mahasiswa() {
         nama = "Belum diisi";
         nim = "-";
         ipk = 0.0;
     }
 
-public Mahasiswa (String nama, String nim, double ipk) {
+    public Mahasiswa (String nama, String nim, double ipk) {
         this.nama = nama;
         this.nim = nim;
         this.ipk = ipk;
+    }
+    public void tampilkanData() {
+        System.out.println("Nama: " + nama);
+        System.out.println("NIM : " + nim);
+        System.out.println("IPK :" + ipk);
+    }
+    public boolean isCumloude(){
+        return ipk >=3.5;
     }
 }
