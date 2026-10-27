@@ -1,17 +1,17 @@
 public class ArrayBuku {
     public static void main(String[] args) {
         Buku[] daftarBuku = {
-                new Buku("Laskar Pelangi", "Andrea Hirata", 2005),
-                new Buku("Bumi", "Tere Liye", 2014),
-                new Buku("Hujan", "Tere Liye", 2016),
-                new Buku("Pulang", "Tere Liye", 2021)
+            new Buku("Laskar Pelangi", "Andrea Hirata", 2005),
+            new Buku("Bumi", "Tere Liye", 2014),
+            new Buku("Negeri 5 Menara", "Ahmad Fuadi", 2009)
         };
-        System.out.println("Buku terbit setelah tahun 2015:");
 
         for (int i = 0; i < daftarBuku.length; i++) {
-            if (daftarBuku[i].tahunTerbit > 2015) {
-                System.out.println(daftarBuku[i].judul);
-            }
+            System.out.println("Buku ke-" + (i + 1));
+            System.out.println("Judul       : " + daftarBuku[i].getJudul());
+            System.out.println("Pengarang   : " + daftarBuku[i].getPengarang());
+            System.out.println("Tahun Terbit: " + daftarBuku[i].getTahunTerbit());
+            System.out.println();
         }
     }
 }

@@ -1,21 +1,50 @@
 public class Produk {
-    String namaProduk;
-    double harga;
-    public Produk(String namaProduk, double harga) {
+    private String kodeProduk;
+    private String namaProduk;
+    private double harga;
+    private int stok;
+
+    public Produk(String kodeProduk, String namaProduk, double harga, int stok) {
+        this.kodeProduk = kodeProduk;
         this.namaProduk = namaProduk;
-        this.harga = harga;
-    }
-    public boolean isMahal(double batasHarga) {
-        return harga > batasHarga;
-    }
-    public static void main(String[] args) {
-        Produk p1 = new Produk("Laptop", 8000000);
-        Produk p2 = new Produk("Mouse", 150000);
+        this.harga = 0;
+        setHarga(harga);
 
-        System.out.println(p1.namaProduk + "mahal: " + p1.isMahal(500000));
-        System.out.println(p1.namaProduk + "mahal: " + p1.isMahal(500000));
+        if (stok >= 0) {
+            this.stok = stok;
+        } else {
+            this.stok = 0;
+            System.out.println("Stok awal ditolak! Stok tidak boleh negatif.");
+        }
     }
 
-    public void tampilkanData() {
+    public String getKodeProduk() { return kodeProduk; }
+    public String getNamaProduk() { return namaProduk; }
+    public double getHarga() { return harga; }
+    public int getStok() { return stok; }
+
+    public void setHarga(double harga) {
+        if (harga >= 0) this.harga = harga;
+        else System.out.println("Harga ditolak! Harga tidak boleh negatif.");
+    }
+
+    public void tambahStok(int jumlah) {
+        if (jumlah <= 0) {
+            System.out.println("Tambah stok gagal! Jumlah harus positif.");
+        } else {
+            stok += jumlah;
+            System.out.println("Tambah stok berhasil. Stok: " + stok);
+        }
+    }
+
+    public void kurangiStok(int jumlah) {
+        if (jumlah <= 0) {
+            System.out.println("Kurangi stok gagal! Jumlah harus positif.");
+        } else if (jumlah > stok) {
+            System.out.println("Kurangi stok gagal! Stok tidak mencukupi.");
+        } else {
+            stok -= jumlah;
+            System.out.println("Kurangi stok berhasil. Stok: " + stok);
+        }
     }
 }
