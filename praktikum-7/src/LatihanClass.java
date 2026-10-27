@@ -6,5 +6,10 @@ public class LatihanClass {
         System.out.println("nama : "+ m1.getnama());// program tetap 'menerima
         System.out.println("ipk: " + m1.getipk());
 
+        m1.setipk(3.8); // valid
+        System.out.println("IPK sekarang: " + m1.getipk());
+
+        m1.setipk(9.9); // tidak valid, akan ditolak
+        System.out.println("IPK sekaran: " + m1.getipk());
     }
 }
