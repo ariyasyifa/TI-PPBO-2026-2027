@@ -10,6 +10,6 @@ public class LatihanClass {
         System.out.println("IPK sekarang: " + m1.getipk());
 
         m1.setipk(9.9); // tidak valid, akan ditolak
-        System.out.println("IPK sekaran: " + m1.getipk());
+        System.out.println("IPK sekarang: " + m1.getipk());
     }
 }
