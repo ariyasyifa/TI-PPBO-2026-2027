@@ -1,4 +1,4 @@
-public class Motor extends Kendaraan{
+public class Motor extends Kendaraan {
     protected String jenisMotor;
 
     public Motor(String merek, int kecepatanMaks, String jenisMotor) {
